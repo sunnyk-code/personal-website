@@ -1,0 +1,393 @@
+/* Google Fonts Import (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #000000;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(8px); /* translucent effect */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  
+  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #a200ff;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin-top: 70px; /* offset for fixed navbar */
+ 
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #a200ff, #ff00ae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;       /* So the width animation works properly */
+  white-space: nowrap;         /* Prevent line wrapping */
+  overflow: hidden;            /* Hide the overflow while typing */
+  border-right: 3px solid #ff00ae; /* The blinking caret */
+  box-sizing: border-box;
+
+  /* 3) Animate typing and caret blink */
+  animation: typing 3s steps(30, end) forwards,
+             blink-caret 0.75s step-end infinite;
+
+
+}
+
+/* Typewriter effect: from width=0 to full width of text */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* Blinking caret */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50%      { border-color: #ff00ae; }
+}
+
+.gradient-typewriter {
+  background: linear-gradient(45deg, #00ffff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00ffcc;
+  box-sizing: border-box;
+  animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.hero-button {
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+  background: linear-gradient(70deg, #a200ff, #ff00ae);
+
+}
+
+.hero-button:hover {
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 0 8px #ff00ae inset, 0 0 8px #ff00ae;
+  transition: 0.3s;
+}
+
+/* Hero Image (optional) */
+.hero-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 4rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  /* background: url('./../images/bg.png');
+  background-size: cover; */
+  /* background: linear-gradient(
+    45deg,         /* diagonal angle */
+    /* #4f4f4f 0%,    stripe #1 (gray) starts at 0% */
+    /* #313131 20%,   stripe #3 (gray) starts at 75% */
+    /* #1b1b1b 60%,   stripe #3 (gray) starts at 75% */
+    /* #000000 100%   stripe #3 ends at 100% */
+  /* ); */ 
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* Footer */
+.footer {
+  background-color: #101010;
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}
+
+
+
+.section-title {
+  /* Similar to .work-title: big, bold heading */
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  /* Similar to .work-subtitle: smaller text, lighter color */
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.section-dark {
+  background-color: #000; /* pure black */
+}
+.section-carbon {
+  background: repeating-linear-gradient(
+    45deg,
+    #1f1f1f 0px,
+    #1f1f1f 4px,
+    #2b2b2b 4px,
+    #2b2b2b 8px
+  );
+}
+
+.about-content-box {
+  position: relative;
+  /* A dark interior so text remains on black */
+  background-color: #1b1b1b;
+  
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  /* For the border effect, we'll set a transparent border on the .about-content-box 
+     and use a pseudo-element to show the gradient behind it. */
+  border: 2px solid transparent;
+  background-clip: padding-box; /* ensures the background is clipped within the border */
+}
+
+/* The pseudo-element that sits behind .about-content-box */
+.about-content-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;    /* match border thickness above */
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;  /* behind the box content */
+  border-radius: inherit; /* ensures the same round corners */
+
+  /* The gradient border, from purple to pink */
+  background: linear-gradient(45deg, #a900ff, #ff00cc);
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 0;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 35px; /* slightly below the circles */
+  left: 0;
+  right: 0;
+  height: 2px; 
+  background: linear-gradient(90deg, #a900ff, #ff00cc);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+/* The circle dot */
+.timeline-item::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a900ff, #ff00cc);
+  box-shadow: 0 0 6px rgba(255,0,204,0.5); /* optional glow */
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  /* Basic Typography */
+  font-size: 1.1rem;   /* Adjust for desired size */
+  line-height: 1.7;    /* Increase for better readability */
+  color: #ccc;         /* Slightly lighter than white */
+  margin-bottom: 1rem; /* Spacing after paragraph */
+  
+  /* Optional: letter-spacing can create an airy feel */
+  letter-spacing: 0.5px;
+  
+  /* Optional: subtle fade-in animation */
+  opacity: 0; 
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Keyframes for a basic fade-in effect */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Contact Section Container (you already have .section, .section-gray) */
+#contact {
+  text-align: center;
+  padding: 3rem 5%;
+}
+
+/* The icon row wrapper */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual icon link container */
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* remove link underline */
+  color: #fff; 
+  transition: transform 0.3s ease;
+  
+  /* If you want a bit of shape or background on hover,
+     you can also add a background or border here. */
+}
+
+.contact-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  transition: filter 0.3s ease;
+  /* or if using react-icons, 
+     you'd style .icon-svg { width: 40px; height: 40px; } */
+}
+
+.contact-icon span {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Hover effects */
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+/* A possible gradient hover effect on the icon's image */
+.contact-icon:hover img {
+  filter: drop-shadow(0 0 8px #ff00cc);
+  /* Or if you want a color-shift, or partial overlay, can do:
+     filter: hue-rotate(20deg) brightness(1.2);
+  */
+}
+
+/* Alternatively, a gradient border around the icon link, if desired */
+.contact-icon {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  background-clip: padding-box;
+}
+.contact-icon::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #a900ff, #ff00cc);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease;
+}
+.contact-icon:hover::before {
+  opacity: 1; /* Show gradient border on hover */
+}
